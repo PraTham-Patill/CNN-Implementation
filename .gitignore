@@ -1,0 +1,90 @@
+# PyTorch and Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyTorch Models (except best checkpoints)
+*.pth
+*.pkl
+*.pt
+# Keep best model checkpoints
+!best_*.pth
+
+# Datasets - users should download automatically  
+data/
+datasets/
+
+# Results - keep structure but not all plots
+results/*.png
+# Keep latest improved model plots
+!results/ImprovedLeNet_*.png
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+*.tmp
+*.log
+
+# Temporary files
+temp/
+tmp/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Keep results folder but ignore specific temp files
+results/*.tmp
+results/temp_*
+
+# Model checkpoints (too large for git)
+results/*.pth
+results/*.pkl
+results/*.pt

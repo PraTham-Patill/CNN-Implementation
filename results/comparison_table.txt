@@ -1,0 +1,55 @@
+
+================================================================================
+COMPREHENSIVE MODEL COMPARISON TABLE
+Generated on: 2025-09-04 19:26:50
+================================================================================
+
+MNIST DATASET RESULTS:
+--------------------------------------------------------------------------------
+Model                               Optimizer  Dropout  Weight Decay Test Acc   Best Val Acc Time (min)
+--------------------------------------------------------------------------------
+LeNet Configurable Model            ADAM       0.5      0.0          99.29%     0.00%        0.0       
+Improved LeNet Model                SGD        0.5      0.0005       99.17%     99.06%       11.8      
+LeNet Configurable Model            ADAM       0.0      0.0          99.00%     0.00%        0.0       
+LeNet Configurable Model            ADAM       0.0      0.0          98.93%     0.00%        0.0       
+LeNet Configurable Model            SGD        0.0      0.0          98.81%     0.00%        0.0       
+LeNet Configurable Model            SGD        0.5      0.01         97.41%     0.00%        0.0       
+LeNet Configurable Model            ADAM       0.0      0.01         97.26%     0.00%        0.0       
+LeNet Configurable Model            ADAM       0.0      0.01         97.26%     0.00%        0.0       
+
+--------------------------------------------------------------------------------
+MNIST Best Performance: 99.29%
+
+CIFAR-10 DATASET RESULTS:
+--------------------------------------------------------------------------------
+Model                               Optimizer  Dropout  Weight Decay Test Acc   Best Val Acc Time (min)
+--------------------------------------------------------------------------------
+Improved LeNet Model                SGD        0.5      0.0005       74.93%     73.58%       16.3      
+LeNet Configurable Model            ADAM       0.0      0.0          59.74%     0.00%        0.0       
+LeNet Configurable Model            ADAM       0.0      0.0          59.28%     0.00%        0.0       
+LeNet Configurable Model            ADAM       0.5      0.0          58.33%     0.00%        0.0       
+LeNet Configurable Model            ADAM       0.0      0.01         52.55%     0.00%        0.0       
+
+--------------------------------------------------------------------------------
+CIFAR-10 Best Performance: 74.93%
+
+SUMMARY STATISTICS:
+--------------------------------------------------------------------------------
+Total Experiments: 13
+MNIST Experiments: 8
+CIFAR-10 Experiments: 5
+
+MNIST Average Accuracy: 98.39%
+CIFAR-10 Average Accuracy: 60.97%
+
+Best Overall MNIST Model: LeNet Configurable Model
+Best Overall CIFAR-10 Model: Improved LeNet Model
+
+KEY INSIGHTS:
+- Improved LeNet architecture achieves ~75% on CIFAR-10 (significant improvement over basic LeNet ~60%)
+- MNIST shows excellent performance across all methods (97-99% accuracy)
+- Dropout regularization shows strong performance on both datasets
+- SGD with momentum provides competitive results with proper learning rate scheduling
+- Data augmentation (CIFAR-10) and enhanced architecture contribute significantly to performance
+
+================================================================================
