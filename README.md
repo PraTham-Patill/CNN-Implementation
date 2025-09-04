@@ -2,7 +2,6 @@
 
 [![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat&logo=python&logoColor=white)](https://python.org/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat)](LICENSE)
 
 A comprehensive implementation of **Enhanced LeNet** architecture achieving **74.93% accuracy on CIFAR-10** and **99.17% on MNIST**. This repository contains 6 different training configurations exploring various regularization techniques, optimizers, and architectural improvements.
 
@@ -250,11 +249,3 @@ This project serves as an educational and research baseline. Feel free to:
 - Implement additional regularization techniques
 - Optimize for mobile/edge deployment
 
-## 📄 License
-
-MIT License - see [LICENSE](LICENSE) file for details.
-
----
-
-**🔥 Achieve 75% CIFAR-10 accuracy with enhanced LeNet architecture!**  
-*Perfect baseline for advanced CNN research and educational purposes.*
