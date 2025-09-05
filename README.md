@@ -14,7 +14,7 @@ This study implements and evaluates enhanced LeNet architectures through systema
 - **Six training configurations** exploring different regularization and optimization techniques
 - **Dual dataset evaluation** on MNIST and CIFAR-10 for comprehensive performance assessment
 - **Architectural enhancements** including improved filter configurations and regularization strategies
-- **Rigorous experimental methodology** with fixed random seeds and comprehensive logging
+
 
 ## Experimental Results
 
@@ -29,6 +29,21 @@ This study implements and evaluates enhanced LeNet architectures through systema
 | L2 Regularization (02)      | 97.26%         | 52.55%            | Weight decay (λ=0.01)                          |
 | Combined Techniques (05)    | 97.41%         | 63.02%            | Multiple regularization methods                |
 
+## Results Analysis
+###  Training Visualizations
+
+**CIFAR-10 (Enhanced LeNet, 15 Epochs)**  
+![CIFAR10 Results](results/ImprovedLeNet_cifar10_sgd_dropout0.5_wd5e-04_15epochs.png)
+
+**MNIST (Enhanced LeNet, 10 Epochs)**  
+![MNIST Results](results/ImprovedLeNet_mnist_sgd_dropout0.5_wd5e-04_10epochs.png)
+
+---
+
+###  Detailed Experiment Logs
+
+📄 [Train Report (full logs)](results/train_report.txt)  
+📄[Comparison Table (aggregated results)](results/comparison_table.txt)
 
 ### Key Contributions
 
@@ -88,27 +103,6 @@ Linear(128→10) → Output
 3. **Performance Metrics**: Test accuracy, validation accuracy tracking, training time analysis
 4. **Model Persistence**: Best model checkpointing based on validation performance
 
-## Implementation
-
-### Project Structure
-
-```
-CNN-Implementation/
-├── 01_baseline_model.py              # Standard LeNet implementation
-├── 02_l2_regularization_model.py     # L2 weight decay regularization
-├── 03_dropout_model.py               # Dropout regularization
-├── 04_sgd_momentum_model.py          # SGD with momentum optimization
-├── 05_all_regularizations_model.py   # Combined regularization techniques
-├── 06_final_model_improved.py        # Enhanced LeNet architecture
-├── run_all_experiments.bat           # Automated experiment execution
-├── run_quick_test.bat                # Reduced-epoch testing
-├── models/                           # Model checkpoints
-├── results/                          # Experimental outputs
-│   ├── train_report.txt              # Comprehensive experiment logs
-│   ├── comparison_table.txt          # Performance comparison
-│   └── *.png                         # Training visualizations
-└── requirements.txt                  # Dependencies
-```
 
 ### Execution
 
@@ -138,15 +132,6 @@ python 06_final_model_improved.py \
   --early_stopping
 ```
 
-## Results Analysis
-
-### Training Efficiency
-
-| Configuration | MNIST (50 epochs) | CIFAR-10 (50 epochs) |
-|---------------|-------------------|----------------------|
-| CPU (Intel i5) | 15-20 minutes | 25-35 minutes |
-| GPU (GTX 1660) | 3-5 minutes | 8-12 minutes |
-| Quick Test (10 epochs) | 3-4 minutes | 5-7 minutes |
 
 ### Output Structure
 
@@ -168,8 +153,6 @@ Training Summary:
 =============================
 ```
 
-**Visualization Output**: High-resolution plots (300 DPI) with descriptive naming convention: `ImprovedLeNet_dataset_optimizer_dropout_weightdecay_epochs.png`
-
 ## Dependencies
 
 ```
@@ -186,9 +169,4 @@ numpy>=1.20.0
 3. **Optimization Strategy**: SGD with momentum and learning rate scheduling outperforms Adam for this architecture class
 4. **Dataset Complexity**: MNIST achieves near-optimal performance with minimal modifications, while CIFAR-10 requires comprehensive architectural enhancements
 
-## Applications
-
-- **Educational**: Comprehensive study of CNN fundamentals and regularization techniques
-- **Research Baseline**: Foundation for advanced CNN architecture development
-- **Benchmarking**: Standardized evaluation framework for image classification models
 
