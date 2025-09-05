@@ -32,11 +32,12 @@ This study implements and evaluates enhanced LeNet architectures through systema
 ## Results Analysis
 ###  Training Visualizations
 
-**CIFAR-10 (Enhanced LeNet, 15 Epochs)**  
+**MNIST **  
+![MNIST Results](results/ImprovedLeNet_mnist_sgd_dropout0.5_wd5e-04_10epochs.png)
+
+**CIFAR-10 **  
 ![CIFAR10 Results](results/ImprovedLeNet_cifar10_sgd_dropout0.5_wd5e-04_15epochs.png)
 
-**MNIST (Enhanced LeNet, 10 Epochs)**  
-![MNIST Results](results/ImprovedLeNet_mnist_sgd_dropout0.5_wd5e-04_10epochs.png)
 
 ---
 
