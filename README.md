@@ -133,26 +133,6 @@ python 06_final_model_improved.py \
 ```
 
 
-### Output Structure
-
-**Experimental Log Format**:
-```
-=============================
-Experiment: Enhanced LeNet Model
-Dataset: CIFAR10
-Hyperparameters:
-  Learning Rate: 0.01
-  Batch Size: 128
-  Optimizer: SGD
-  Weight Decay: 0.0005
-  Dropout: 0.5
-Training Summary:
-  Best Validation Accuracy: 73.58% (Epoch 15)
-  Final Test Accuracy: 74.93%
-  Training Time: 16.33 minutes
-=============================
-```
-
 ## Dependencies
 
 ```
