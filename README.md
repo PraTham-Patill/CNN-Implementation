@@ -1,8 +1,7 @@
-# Enhanced LeNet Architecture for MNIST and CIFAR-10 Classification
+# CNN Implementation on MNIST and CIFAR-10
 
 [![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat&logo=python&logoColor=white)](https://python.org/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat)](LICENSE)
 
 ## Abstract
 
@@ -21,14 +20,15 @@ This study implements and evaluates enhanced LeNet architectures through systema
 
 ### Performance Summary
 
-| Model Configuration | MNIST Accuracy | CIFAR-10 Accuracy | Primary Technique |
-|-------------------|----------------|-------------------|-------------------|
-| Enhanced LeNet (06) | 99.17% | **74.93%** | Architectural improvements + data augmentation |
-| Dropout Regularization (03) | **99.29%** | 58.33% | Dropout layers (p=0.5) |
-| Baseline LeNet (01) | 99.00% | 59.74% | Standard LeNet implementation |
-| SGD with Momentum (04) | 98.81% | — | Momentum-based optimization |
-| L2 Regularization (02) | 97.26% | 52.55% | Weight decay (λ=0.01) |
-| Combined Techniques (05) | 97.41% | — | Multiple regularization methods |
+| Model Configuration         | MNIST Accuracy | CIFAR-10 Accuracy | Primary Technique                              |
+| --------------------------- | -------------- | ----------------- | ---------------------------------------------- |
+| Enhanced LeNet (06)         | 99.17%         | **74.93%**        | Architectural improvements + data augmentation |
+| Dropout Regularization (03) | 99.29%         | 58.33%            | Dropout layers (p=0.5)                         |
+| Baseline LeNet (01)         | 99.00%         | 59.74%            | Standard LeNet implementation                  |
+| SGD with Momentum (04)      | 98.81%         | 61.12%            | Momentum-based optimization                    |
+| L2 Regularization (02)      | 97.26%         | 52.55%            | Weight decay (λ=0.01)                          |
+| Combined Techniques (05)    | 97.41%         | 63.02%            | Multiple regularization methods                |
+
 
 ### Key Contributions
 
@@ -186,20 +186,9 @@ numpy>=1.20.0
 3. **Optimization Strategy**: SGD with momentum and learning rate scheduling outperforms Adam for this architecture class
 4. **Dataset Complexity**: MNIST achieves near-optimal performance with minimal modifications, while CIFAR-10 requires comprehensive architectural enhancements
 
-## Reproducibility
-
-All experiments utilize fixed random seeds and deterministic operations to ensure reproducible results. The complete experimental framework is designed to facilitate replication and extension for further research.
-
 ## Applications
 
 - **Educational**: Comprehensive study of CNN fundamentals and regularization techniques
 - **Research Baseline**: Foundation for advanced CNN architecture development
 - **Benchmarking**: Standardized evaluation framework for image classification models
 
-## License
-
-MIT License - See [LICENSE](LICENSE) for details.
-
----
-
-*This implementation provides a rigorous experimental framework for CNN architecture evaluation and serves as a foundation for advanced deep learning research.*
