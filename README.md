@@ -55,19 +55,6 @@ CIFAR-10
 
 ## Architecture
 
-### Enhanced LeNet Design (Model 06)
-
-```
-Input (32×32×C) → Conv2d(32, 5×5, pad=2) → MaxPool(2×2) → ReLU →
-Conv2d(64, 5×5, pad=2) → MaxPool(2×2) → ReLU →
-Conv2d(128, 3×3, pad=1) → ReLU → Flatten →
-Linear(8192→256) → ReLU → Dropout(0.5) →
-Linear(256→128) → ReLU → Dropout(0.5) →
-Linear(128→10) → Output
-```
-
-**Parameters**: ~2.2M (Enhanced) vs ~60K (Standard LeNet)
-
 ### Architectural Improvements
 
 - **Filter scaling**: Progressive filter increase (32→64→128 vs 6→16)
